@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="administrator" method="upgrade">
+    <name>Latch</name>
+    <author>Eleven Paths</author>
+    <authorUrl>www.elevenpaths.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Latch authentication plugin</description>
+	<scriptfile>install.php</scriptfile>
+    <files>
+        <filename>mod_admin_latch.xml</filename>
+        <filename module="mod_admin_latch">mod_admin_latch.php</filename>
+    </files>
+    <config>
+    </config>
+</extension>

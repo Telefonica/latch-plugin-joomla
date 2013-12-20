@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="user">
+    <name>Latch</name>
+    <author>Eleven Paths</author>
+    <authorUrl>www.elevenpaths.com</authorUrl>
+    <version>1.0.0</version>
+    <description>Latch authentication plugin</description>
+	<scriptfile>install.php</scriptfile>
+    <files>
+        <filename plugin="latch">latch.php</filename>
+        <filename>twoFactorForm.php</filename>
+		<folder>sdk</folder>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="latch_appID"
+                    type="text"
+                    size="45"
+                    maxlength="20"
+                    label="Application ID"
+                    description="Application ID" />
+                <field
+                    name="latch_appSecret"
+                    type="text"
+                    size="90"
+                    maxlength="40"
+                    label="Application secret"
+                    description="Application secret" />
+				<field
+                    name="latch_host"
+                    type="text"
+                    size="90"
+                    maxlength="40"
+                    label="Host"
+                    description="Host" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
