@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ <extension type="package" version="3.2">
+ <name>Latch Package</name>
+ <author>Eleven Paths</author>
+ <packagename>latch</packagename>
+ <version>1.0.1</version>
+ <url>www.elevenpaths.com</url>
+ <packager>Eleven Paths</packager>
+ <description>Joomla! extension to integrate with Latch.</description>
+ <files folder="packages">
+   <file type="module" id="mod_latch" client="site">mod_latch.zip</file>
+   <file type="plugin" id="latch" group="user">plg_user_latch.zip</file>
+   <file type="module" id="mod_admin_latch" client="administrator">mod_admin_latch.zip</file>
+ </files>
+ </extension>
