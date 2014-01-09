@@ -42,7 +42,7 @@ class mod_latchInstallerScript
 			$db->query();
 			
 			// Module default location
-			$query = "update `#__modules` set position='position-7',published=1,access=2 where module = 'mod_latch'";
+			$query = "update `#__modules` set position='position-7',ordering=1,published=1,access=2 where module = 'mod_latch'";
 			$db = JFactory::getDBO();
 			$db->setQuery($query);
 			$db->query();

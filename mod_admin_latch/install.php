@@ -42,7 +42,7 @@ class mod_admin_latchInstallerScript
 			$db->query();
 			
 			// Module default location
-			$query = "update `#__modules` set position='cpanel',published=1,access=6 where module = 'mod_admin_latch'";
+			$query = "update `#__modules` set position='cpanel',ordering=1,published=1,access=3 where module = 'mod_admin_latch'";
 			$db = JFactory::getDBO();
 			$db->setQuery($query);
 			$db->query();

@@ -44,16 +44,17 @@ $pairingToken = $input->get("pairingToken", false);
 $userWantsToPairAccount = ($latchAction == "pair");
 
 if ($pairingToken) {
+    JSession::checkToken() or die( 'Invalid Token' );
     if (ModLatchHelper::pair($pairingToken)) {
         $application->enqueueMessage('Account paired succesfully.');
     } else {
         $application->enqueueMessage('Error pairing account.', 'warning');
     }
 } elseif ($latchAction) {
+    JSession::checkToken() or die( 'Invalid Token' );
     if ($latchAction == "pair") {
         $userWantsToPairAccount = true;
     } elseif ($latchAction == "unpair") {
-		JSession::checkToken() or die( 'Invalid Token' );
         if (!ModLatchHelper::unpair()) {
             $application->enqueueMessage('Error unpairing account.', 'warning');
         } else {

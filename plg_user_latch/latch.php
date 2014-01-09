@@ -32,13 +32,14 @@ require_once JPATH_SITE . "/modules/mod_latch/helper.php";
 class plgUserLatch extends JPlugin {
 
     private static $LOGIN_ROUTE = 'index.php?option=com_users&view=login';
-    private static $ADMIN_LOGIN_ROUTE = 'administrator/index.php';
     protected $app;
     protected $db;
 
     public function __construct(& $subject, $config) {
         parent::__construct($subject, $config);
         $this->loadLanguage();
+        $this->app = JFactory::getApplication();
+        $this->db = JFactory::getDbo();
     }
 
     public function onUserLogin($user, $options = array()) {
@@ -57,8 +58,10 @@ class plgUserLatch extends JPlugin {
     }
 
     private function makeLoginFail() {
+        JFactory::getSession()->destroy(); // The user cannot be authenticated yet
         $this->app->enqueueMessage(JText::_('JGLOBAL_AUTH_INVALID_PASS'), 'warning');
-        $this->app->redirect(JRoute::_(self::$LOGIN_ROUTE, false));
+        $redirectRoute = ($this->app->isAdmin()) ? $_SERVER['SCRIPT_NAME'] : self::$LOGIN_ROUTE;
+        $this->app->redirect(JRoute::_($redirectRoute, false));
     }
 
     private function isAccountBlockedByLatch() {

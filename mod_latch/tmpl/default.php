@@ -21,11 +21,11 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 
 <div class="latch-container">
 <form method="POST">
+    <?php echo JHtml::_( 'form.token' ); ?>
     <?php if ($paired): ?>
         <p>Your account is protected with Latch.</p>
         <input type="hidden" name="latchAction" value="unpair">
         <input type="submit" value="Unpair account">
-		<?php echo JHtml::_( 'form.token' ); ?>
     <?php else: ?>
         <?php if (isset($userWantsToPairAccount) && $userWantsToPairAccount): ?>
             <label for="pairingToken">Type your pairing token:</label>

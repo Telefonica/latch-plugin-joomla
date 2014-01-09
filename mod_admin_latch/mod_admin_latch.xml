@@ -3,7 +3,7 @@
     <name>Latch</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <description>Latch authentication plugin</description>
 	<scriptfile>install.php</scriptfile>
     <files>

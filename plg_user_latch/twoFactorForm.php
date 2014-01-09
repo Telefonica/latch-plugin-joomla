@@ -18,22 +18,24 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 ?>
-
 <html>
     <head>
         <style>
-            .form-container {
-                padding: 10px 0px 0px 10px;
-                border-radius: 4px;
-                border: #999 solid 1px;
-                width: 450px;
-                margin: 0 auto;
-            }
+            .twoFactorContainer { display:block; width:300px; margin: 5% auto 0 auto; text-align: center; border: solid 1px rgb(184, 184, 184); border-radius:5px}
+            .twoFactorHeader {float:left; background: #00b9be; color: #FFF; width:100%; border-top-left-radius: 5px; border-top-right-radius: 5px; font-family: sans-serif;}
+            .twoFactorHeader h3 {text-align: center; margin-left: 10px;}
+            .twoFactorForm {clear:left; padding-top:10px;}
+            input {margin-top:10px}
+            input[type="submit"] {width:65px;}
         </style>
     </head>
     <body>
-        <div class="form-container">
-            <form method="POST" action="<?php echo $loginFormAction; ?>">
+        <div class="twoFactorContainer">
+            <div class="twoFactorHeader">
+                <h3>One-time password</h3>
+            </div>
+            <div class="twoFactorForm">
+                <form method="POST" action="<?php echo $loginFormAction; ?>">
                 <label for="nameTwoFactor">Insert your one-time password:</label>
                 <input type="text" name="latchTwoFactor" id="latchTwoFactor">
                 <input type="hidden" name="username" value="<?php echo htmlspecialchars($username); ?>">
@@ -43,6 +45,7 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
                 <?php echo JHtml::_('form.token'); ?>
                 <button type="submit" name="Submit">Submit</button>
             </form>
+            </div>
         </div>
     </body>
 </html>
