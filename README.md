@@ -12,8 +12,10 @@
 
 #### INSTALLING THE MODULE IN JOOMLA ####
 
-1. Add the plugin as a module in its administration panel in Joomla. Click on "Extensions Manager", inside "Extensions". It will show a form where you can browse and select previously downloaded ZIP file. Press "Upload & Install" to install it.
+1. Download the plugin clicking the [Download ZIP](https://github.com/ElevenPaths/latch-plugin-joomla/archive/master.zip) link.  
 
-2. Introduce "Application ID" and "Secret" previously generated. The administrator can now save the changes clicking on "Save" or "Save & Close". If everything is ok, a confirmation message will be received.
+2. Add the plugin as a module in its administration panel in Joomla. Click on "Extensions Manager", inside "Extensions". It will show a form where you can browse and select previously downloaded ZIP file. Press "Upload & Install" to install it.
 
-3. Click on "Module Manager: Modules", on the left side of the administrator's panel. To change the position it is necessary to edit the module, clicking on it. A new window will be opened and the location may be set. It will depend on the theme used in Joomla.
+3. Introduce "Application ID" and "Secret" previously generated. The administrator can now save the changes clicking on "Save" or "Save & Close". If everything is ok, a confirmation message will be received.
+
+4. Click on "Module Manager: Modules", on the left side of the administrator's panel. To change the position it is necessary to edit the module, clicking on it. A new window will be opened and the location may be set. It will depend on the theme used in Joomla.
