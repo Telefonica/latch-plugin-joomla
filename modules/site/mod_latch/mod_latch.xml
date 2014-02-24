@@ -4,6 +4,7 @@
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
     <version>1.0.1</version>
+    <creationDate>January 2014</creationDate>
     <description>Latch authentication plugin</description>
 	<scriptfile>install.php</scriptfile>
     <files>
