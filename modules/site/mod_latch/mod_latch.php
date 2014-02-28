@@ -58,7 +58,7 @@ if ($pairingToken) {
         if (!ModLatchHelper::unpair()) {
             $application->enqueueMessage('Error unpairing account.', 'warning');
         } else {
-            $application->enqueueMessage('Account upaired succesfully.');
+            $application->enqueueMessage('Account unpaired succesfully.');
         }
     }
 }

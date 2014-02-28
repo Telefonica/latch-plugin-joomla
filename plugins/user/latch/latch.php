@@ -44,11 +44,11 @@ class plgUserLatch extends JPlugin {
 
     public function onUserLogin($user, $options = array()) {
         $input = $this->app->input;
-        if ($input->get("latchTwoFactor", false)) {
-            $session = JFactory::getSession();
+        $session = JFactory::getSession();
+        if ($session->get("latch_twoFactor")) {
             $storedTwoFactor = $session->get("latch_twoFactor");
             $session->clear("latch_twoFactor");
-            if ($input->get("latchTwoFactor", false) != $storedTwoFactor) {
+            if ($input->get("latchTwoFactor", "") != $storedTwoFactor) {
                 $this->makeLoginFail();
             }
         } elseif ($this->isAccountBlockedByLatch()) {
