@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="plugin" group="user">
-    <name>Latch</name>
+    <name>PLG_USER_LATCH</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
     <version>1.0.1</version>
     <creationDate>January 2014</creationDate>
-    <description>Latch authentication plugin</description>
+    <description>PLG_USER_LATCH_XML_DESCRIPTION</description>
     <scriptfile>install.php</scriptfile>
     <files>
         <filename plugin="latch">latch.php</filename>
         <filename>twoFactorForm.php</filename>
         <folder>sdk</folder>
     </files>
+    <languages folder="language">
+        <!-- en-GB -->
+        <language tag="en-GB">en-GB/en-GB.plg_user_latch.ini</language>
+        <language tag="en-GB">en-GB/en-GB.plg_user_latch.sys.ini</language>
+        <!-- es-ES -->
+        <language tag="es-ES">es-ES/es-ES.plg_user_latch.ini</language>
+        <language tag="es-ES">es-ES/es-ES.plg_user_latch.sys.ini</language>
+    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
@@ -20,23 +28,23 @@
                     type="text"
                     size="45"
                     maxlength="20"
-                    label="Application ID"
-                    description="Application ID. To get the application ID go to the developer area at https://latch.elevenpaths.com."
+                    label="PLG_USER_LATCH_PARAM_APPLICATION_ID_LABEL"
+                    description="PLG_USER_LATCH_PARAM_APPLICATION_ID_DESC"
                 />
                 <field
                     name="latch_appSecret"
                     type="text"
                     size="45"
                     maxlength="40"
-                    label="Application secret"
-                    description="Application secret. To get the application secret go to the developer area at https://latch.elevenpaths.com."
+                    label="PLG_USER_LATCH_PARAM_APPLICATION_SECRET_LABEL"
+                    description="PLG_USER_LATCH_PARAM_APPLICATION_SECRET_DESC"
                 />
                 <field
                     name="latch_host"
                     type="text"
                     size="40"
-                    label="Host"
-                    description="Latch remote server location (optional)."
+                    label="PLG_USER_LATCH_PARAM_HOST_LABEL"
+                    description="PLG_USER_LATCH_PARAM_HOST_DESC"
                     default="https://latch.elevenpaths.com"
                 />
             </fieldset>
