@@ -26,14 +26,8 @@ defined('_JEXEC') or die('Restricted access');
 
 require_once( dirname(__FILE__) . '/helper.php' );
 
-//echo "<a href='" . JRoute::_("/modules/mod_latch/latch.css") . "'>link</a><br>";
-//die();
-
-$route = JRoute::_("modules/mod_latch/latch.css");
-
 // Add CSS files
-if (!isset($cssAlreadySet))
-    JFactory::getDocument()->addStyleSheet(JRoute::_("modules/mod_latch/latch.css"));
+JFactory::getDocument()->addStyleSheet(JUri::root() . "modules/mod_latch/latch.css");
 
 // Generate all the variables needed in the view
 $user = JFactory::getUser();

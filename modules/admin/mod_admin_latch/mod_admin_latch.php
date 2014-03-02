@@ -19,8 +19,4 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-$route = JRoute::_("../modules/mod_latch/latch.css");
-JFactory::getDocument()->addStyleSheet($route);
-$cssAlreadySet = true;
-
 include JPATH_SITE . "/modules/mod_latch/mod_latch.php";
