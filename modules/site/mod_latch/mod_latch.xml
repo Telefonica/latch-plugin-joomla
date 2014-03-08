@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="module" version="3.2" client="site" method="upgrade">
-    <name>Latch</name>
+    <name>MOD_LATCH</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
     <version>1.0.1</version>
     <creationDate>January 2014</creationDate>
-    <description>Latch authentication plugin</description>
+    <description>MOD_LATCH_XML_DESCRIPTION</description>
 	<scriptfile>install.php</scriptfile>
     <files>
         <filename>mod_latch.xml</filename>
@@ -18,6 +18,14 @@
         <filename>symbol.png</filename>
         <folder>tmpl</folder>
     </files>
+    <languages folder="language">
+        <!-- en-GB -->
+        <language tag="en-GB">en-GB/en-GB.mod_latch.ini</language>
+        <language tag="en-GB">en-GB/en-GB.mod_latch.sys.ini</language>
+        <!-- es-ES -->
+        <language tag="es-ES">es-ES/es-ES.mod_latch.ini</language>
+        <language tag="es-ES">es-ES/es-ES.mod_latch.sys.ini</language>
+    </languages>
     <config>
     </config>
 </extension>

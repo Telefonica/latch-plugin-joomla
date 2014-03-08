@@ -23,20 +23,20 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 <form method="POST">
     <?php echo JHtml::_( 'form.token' ); ?>
     <?php if ($paired): ?>
-        <p>Your account is protected with Latch.</p>
+        <p><?php echo JText::_('MOD_LATCH_ACCOUNT_PROTECTED'); ?></p>
         <input type="hidden" name="latchAction" value="unpair">
         <input type="submit" value="Unpair account">
     <?php else: ?>
         <?php if (isset($userWantsToPairAccount) && $userWantsToPairAccount): ?>
-            <label for="pairingToken">Type your pairing token:</label>
+            <label for="pairingToken"><?php echo JText::_('MOD_LATCH_TYPE_PAIRING_TOKEN'); ?>:</label>
             <input type="text" name="pairingToken" class="small-input"><br>
             <div style="display: block; margin: 0 auto;">
-                <button type="submit">Submit</button>
+                <button type="submit"><?php echo JText::_('MOD_LATCH_SUBMIT'); ?></button>
             </div>
         <?php else: ?>
-            <p>Your account is unprotected</p>
+            <p><?php echo JText::_('MOD_LATCH_ACCOUNT_UNPROTECTED'); ?></p>
             <input type="hidden" name="latchAction" value="pair">
-            <button type="submit" class="latch-button">Pair account</button>
+            <button type="submit" class="latch-button"><?php echo JText::_('MOD_LATCH_PAIR_ACCOUNT'); ?></button>
         <?php endif; ?>
     <?php endif; ?>
 </form>
