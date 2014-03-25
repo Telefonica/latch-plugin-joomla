@@ -24,6 +24,10 @@ require_once( dirname(__FILE__) . '/helper.php' );
 // No direct access
 defined('_JEXEC') or die('Restricted access');
 
+// Load module language
+$lang = JFactory::getLanguage();
+$lang->load('mod_latch', JPATH_SITE);
+
 require_once( dirname(__FILE__) . '/helper.php' );
 
 // Add CSS files
