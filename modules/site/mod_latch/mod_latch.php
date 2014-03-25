@@ -44,7 +44,7 @@ $userWantsToPairAccount = ($latchAction == "pair");
 if ($pairingToken) {
     JSession::checkToken() or die( 'Invalid Token' );
     if (ModLatchHelper::pair($pairingToken)) {
-        $application->enqueueMessage('Account paired succesfully.');
+        $application->enqueueMessage('Account paired successfully.');
     } else {
         $application->enqueueMessage('Error pairing account.', 'warning');
     }
@@ -56,7 +56,7 @@ if ($pairingToken) {
         if (!ModLatchHelper::unpair()) {
             $application->enqueueMessage('Error unpairing account.', 'warning');
         } else {
-            $application->enqueueMessage('Account unpaired succesfully.');
+            $application->enqueueMessage('Account unpaired successfully.');
         }
     }
 }
