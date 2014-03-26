@@ -2,7 +2,7 @@
 
 
 ##PREREQUISITES
- * Joomla version 1.5 or later.
+ * Joomla version 2.5 or later.
 
  * Curl extensions active in PHP (uncomment **"extension=php_curl.dll"** or"** extension=curl.so"** in Windows or Linux php.ini respectively).
 
@@ -27,3 +27,17 @@
 
 ##UNINSTALLING THE MODULE IN JOOMLA
 Go to **"Extensions Manager"**, inside **"Extensions"**. Press **"Manage"** on the left side menu. Between installed modules, search for **"Latch Package"**. Click on the checkbox and press **"Uninstall"** on the upper side. A confirmation message will appear.
+
+
+##USE OF LATCH MODULE FOR THE USERS
+**Latch does not affect in any case or in any way the usual operations with an account. It just allows or denies actions over it, acting as an independent extra layer of security that, once removed or without effect, will have no effect over the accounts, that will remain with its original state.**
+
+The user needs the Latch application installed on the phone, and follow these steps:
+
+* **Step 1:** Logged in your own account, and click on the new button **"Pair Account"**.
+
+* **Step 2:** From the Latch app on the phone, the user has to generate the token, pressing on **“generate pairing code to add service"** at the bottom of the application.
+
+* **Step 3:** The user has to type the characters generated on the phone into the text box displayed on the web page. Click on **"Submit"** button.
+
+* **Step 4:** Now the user may lock and unlock the account, preventing any unauthorized access.
