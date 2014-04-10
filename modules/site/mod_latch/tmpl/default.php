@@ -25,13 +25,13 @@ Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
     <?php if ($paired): ?>
         <p><?php echo JText::_('MOD_LATCH_ACCOUNT_PROTECTED'); ?></p>
         <input type="hidden" name="latchAction" value="unpair">
-        <input type="submit" value="Unpair account">
+        <button class="latch-button" type="submit" ><?php echo JText::_('MOD_LATCH_UNPAIR_ACCOUNT'); ?></button>
     <?php else: ?>
         <?php if (isset($userWantsToPairAccount) && $userWantsToPairAccount): ?>
             <label for="pairingToken"><?php echo JText::_('MOD_LATCH_TYPE_PAIRING_TOKEN'); ?>:</label>
             <input type="text" name="pairingToken" class="small-input"><br>
             <div style="display: block; margin: 0 auto;">
-                <button type="submit"><?php echo JText::_('MOD_LATCH_SUBMIT'); ?></button>
+                <button class="latch-button" type="submit"><?php echo JText::_('MOD_LATCH_SUBMIT'); ?></button>
             </div>
         <?php else: ?>
             <p><?php echo JText::_('MOD_LATCH_ACCOUNT_UNPROTECTED'); ?></p>
