@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" ?>
- <extension type="package" version="3.2">
- <name>Latch Package</name>
- <author>Eleven Paths</author>
- <packagename>latch</packagename>
- <version>1.0.1</version>
- <creationDate>January 2014</creationDate>
- <url>www.elevenpaths.com</url>
- <packager>Eleven Paths</packager>
- <description>Joomla! extension to integrate with Latch.</description>
- <files>
-   <file type="module" id="mod_latch" client="site">modules/site/mod_latch</file>
-   <file type="plugin" id="latch" group="user">plugins/user/latch</file>
-   <file type="module" id="mod_admin_latch" client="administrator">modules/admin/mod_admin_latch</file>
- </files>
- </extension>
+<extension type="package" version="3.2">
+	<name>Latch</name>
+	<author>Eleven Paths</author>
+	<packagename>latch</packagename>
+	<version>2.0.0</version>
+	<creationDate>April 2014</creationDate>
+	<url>www.elevenpaths.com</url>
+	<packager>Eleven Paths</packager>
+	<description>Joomla! extension to integrate with Latch.</description>
+	<files>
+		<file type="module" id="mod_latch" client="site">modules/site/mod_latch</file>
+		<file type="plugin" id="latch" group="user">plugins/user/latch</file>
+		<file type="module" id="mod_admin_latch" client="administrator">modules/admin/mod_admin_latch</file>
+		<file type="library" id="latch">libraries/latch</file>
+	</files>
+</extension>

@@ -11,7 +11,7 @@
     text-shadow: none;
     transition: all 0.3s ease 0s;
     text-decoration:none;
-    background:url(symbol.png) no-repeat #00b9be 8px 6px;
+    background:url(../images/symbol.png) no-repeat #00b9be 8px 6px;
     background-size:15px 15px;
     padding-left:30px;
     margin: 0 auto;
