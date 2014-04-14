@@ -1,5 +1,4 @@
 <?php
-
 /*
 Latch Joomla extension - Integrates Latch into the Joomla authentication process.
 Copyright (C) 2013 Eleven Paths
@@ -19,7 +18,7 @@ License along with this library; if not, write to the Free Software
 Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-require_once( dirname(__FILE__) . '/helper.php' );
+require_once dirname(__FILE__) . '/helper.php';
 
 // No direct access
 defined('_JEXEC') or die('Restricted access');
@@ -27,8 +26,6 @@ defined('_JEXEC') or die('Restricted access');
 // Load module language
 $lang = JFactory::getLanguage();
 $lang->load('mod_latch', JPATH_SITE);
-
-require_once( dirname(__FILE__) . '/helper.php' );
 
 // Add CSS files
 JFactory::getDocument()->addStyleSheet(JUri::root() . "modules/mod_latch/latch.css");
@@ -41,26 +38,41 @@ $latchAction = $input->get("latchAction", false);
 $pairingToken = $input->get("pairingToken", false);
 $userWantsToPairAccount = ($latchAction == "pair");
 
-if ($pairingToken) {
-    JSession::checkToken() or die( 'Invalid Token' );
-    if (ModLatchHelper::pair($pairingToken)) {
-        $application->enqueueMessage('Account paired successfully.');
-    } else {
-        $application->enqueueMessage('Error pairing account.', 'warning');
-    }
-} elseif ($latchAction) {
-    JSession::checkToken() or die( 'Invalid Token' );
-    if ($latchAction == "pair") {
-        $userWantsToPairAccount = true;
-    } elseif ($latchAction == "unpair") {
-        if (!ModLatchHelper::unpair()) {
-            $application->enqueueMessage('Error unpairing account.', 'warning');
-        } else {
-            $application->enqueueMessage('Account unpaired successfully.');
-        }
-    }
+if ($pairingToken)
+{
+	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
+
+	if (ModLatchHelper::pair($pairingToken))
+	{
+		$application->enqueueMessage(JText::_('MOD_LATCH_ACCOUNT_PAIRED'));
+	}
+	else
+	{
+		$application->enqueueMessage(JText::_('MOD_LATCH_ERROR_PAIRING_ACCOUNT'), 'warning');
+	}
 }
-$paired = (ModLatchHelper::getLatchId($user->id) != NULL);
+elseif ($latchAction)
+{
+	JSession::checkToken() or die(JText::_('JINVALID_TOKEN'));
+
+	if ($latchAction == "pair")
+	{
+		$userWantsToPairAccount = true;
+	}
+	elseif ($latchAction == "unpair")
+	{
+		if (!ModLatchHelper::unpair())
+		{
+			$application->enqueueMessage(JText::_('MOD_LATCH_ERROR_UNPAIRING_ACCOUNT'), 'warning');
+		}
+		else
+		{
+			$application->enqueueMessage(JText::_('MOD_LATCH_ACCOUNT_UNPAIRED'));
+		}
+	}
+}
+
+$paired = (ModLatchHelper::getLatchId($user->id) != null);
 
 // Load the view
 require JPATH_ROOT . "/modules/mod_latch/tmpl/default.php";
