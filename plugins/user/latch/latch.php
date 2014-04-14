@@ -1,34 +1,23 @@
 <?php
+/**
+ * @package     Latch
+ * @subpackage  Plugin
+ *
+ * @copyright   Copyright (C) 2013-2014 Eleven Paths. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE
+ */
 
-/*
-Latch Joomla extension - Integrates Latch into the Joomla authentication process.
-Copyright (C) 2013 Eleven Paths
+defined('_JEXEC') or die;
 
-This library is free software; you can redistribute it and/or
-modify it under the terms of the GNU Lesser General Public
-License as published by the Free Software Foundation; either
-version 2.1 of the License, or (at your option) any later version.
+JLoader::import('latch.library');
 
-This library is distributed in the hope that it will be useful,
-but WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-Lesser General Public License for more details.
-
-You should have received a copy of the GNU Lesser General Public
-License along with this library; if not, write to the Free Software
-Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
-*/
-
-defined('_JEXEC') or die('Restricted access');
-
-if (!class_exists('Latch')) {
-    require_once(dirname(__FILE__) . '/sdk/Error.php');
-    require_once(dirname(__FILE__) . '/sdk/LatchResponse.php');
-    require_once(dirname(__FILE__) . '/sdk/Latch.php');
-}
-
-require_once JPATH_SITE . "/modules/mod_latch/helper.php";
-
+/**
+ * Latch user plugin
+ *
+ * @package     Latch
+ * @subpackage  Plugin
+ * @since       1.0
+ */
 class plgUserLatch extends JPlugin {
 
     private static $LOGIN_ROUTE = 'index.php?option=com_users&view=login';
@@ -66,7 +55,7 @@ class plgUserLatch extends JPlugin {
 
     private function isAccountBlockedByLatch() {
         $userId = $this->retrieveUserId();
-        $latchId = ModLatchHelper::getLatchId($userId);
+        $latchId = LatchHelper::getLatchId($userId);
         if ($latchId != NULL) {
             $status = $this->getLatchStatus($latchId);
             if (isset($status['twoFactor'])) {
@@ -93,7 +82,7 @@ class plgUserLatch extends JPlugin {
     }
 
     private function getLatchStatus($latchId) {
-        $api = ModLatchHelper::getLatchConnection();
+        $api = LatchHelper::getLatchConnection();
         if ($api != NULL) {
             $response = $api->status($latchId);
             if ($this->isLatchResponseValid($response)) {

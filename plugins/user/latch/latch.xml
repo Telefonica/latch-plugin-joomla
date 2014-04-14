@@ -3,14 +3,16 @@
     <name>PLG_USER_LATCH</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
-    <version>1.0.1</version>
-    <creationDate>January 2014</creationDate>
+    <license>GNU General Public License version 2 or later, see LICENSE.</license>
+    <copyright>Copyright (C) 2013-2014 Eleven Paths. All rights reserved.</copyright>
+    <version>2.0.0</version>
+    <creationDate>April 2014</creationDate>
     <description>PLG_USER_LATCH_XML_DESCRIPTION</description>
     <scriptfile>install.php</scriptfile>
     <files>
+        <filename>LICENSE</filename>
         <filename plugin="latch">latch.php</filename>
         <filename>twoFactorForm.php</filename>
-        <folder>sdk</folder>
     </files>
     <languages folder="language">
         <!-- en-GB -->

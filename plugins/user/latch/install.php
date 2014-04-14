@@ -1,5 +1,21 @@
 <?php
+/**
+ * @package     Latch
+ * @subpackage  Plugin.Installer
+ *
+ * @copyright   Copyright (C) 2013-2014 Eleven Paths. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE
+ */
 
+defined('_JEXEC') or die;
+
+/**
+ * Installer.
+ *
+ * @package     Latch
+ * @subpackage  Installer
+ * @since       1.0
+ */
 class plgUserLatchInstallerScript
 {
          /**
@@ -11,7 +27,7 @@ class plgUserLatchInstallerScript
          * @return  boolean  True on success
          */
         public function preflight($route, JAdapterInstance $adapter) { }
- 
+
         /**
          * Called after any type of action
          *
@@ -21,7 +37,7 @@ class plgUserLatchInstallerScript
          * @return  boolean  True on success
          */
         public function postflight($route, JAdapterInstance $adapter) { }
- 
+
         /**
          * Called on installation
          *
@@ -35,9 +51,9 @@ class plgUserLatchInstallerScript
 			$db = JFactory::getDBO();
 			$db->setQuery($query);
 			$db->query();
-			
+
 		}
- 
+
         /**
          * Called on update
          *
@@ -46,7 +62,7 @@ class plgUserLatchInstallerScript
          * @return  boolean  True on success
          */
         public function update(JAdapterInstance $adapter) { }
- 
+
         /**
          * Called on uninstallation
          *
