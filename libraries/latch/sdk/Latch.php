@@ -20,6 +20,8 @@
   Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
  */
 
+ defined('_JEXEC') or die;
+ 
 final class Latch {
 	private static $API_VERSION = "0.6";
 	public static $API_HOST = "https://latch.elevenpaths.com";
