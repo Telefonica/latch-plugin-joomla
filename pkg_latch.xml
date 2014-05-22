@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <extension type="package" version="3.2">
-	<name>Latch</name>
+	<name>Latch for Joomla!</name>
 	<author>Eleven Paths</author>
 	<packagename>latch</packagename>
 	<version>2.0.0</version>
