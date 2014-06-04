@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension version="3.0" type="plugin" group="user">
-    <name>PLG_USER_LATCH</name>
+    <name>Latch user plugin for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
     <license>GNU General Public License version 2 or later, see LICENSE.</license>
     <copyright>Copyright (C) 2013-2014 Eleven Paths. All rights reserved.</copyright>
     <version>2.0.0</version>
     <creationDate>April 2014</creationDate>
-    <description>PLG_USER_LATCH_XML_DESCRIPTION</description>
+    <description>Latch plugin for users for Joomla!</description>
     <scriptfile>install.php</scriptfile>
     <files>
         <filename>LICENSE</filename>

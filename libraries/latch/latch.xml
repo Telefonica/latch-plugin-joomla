@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="library" method="upgrade" version="2.5">
-    <name>Latch - Library</name>
+    <name>Latch - Library for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
     <license>GNU General Public License version 2 or later, see LICENSE.</license>
@@ -8,7 +8,7 @@
     <version>2.0.0</version>
     <creationDate>April 2014</creationDate>
     <libraryname>latch</libraryname>
-    <description>Common Latch library</description>
+    <description>Common Latch library for Joomla!</description>
     <files>
         <folder>sdk</folder>
         <folder>helper</folder>
