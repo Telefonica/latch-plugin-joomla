@@ -8,6 +8,7 @@
 	<url>www.elevenpaths.com</url>
 	<packager>Eleven Paths</packager>
 	<description>Joomla! extension to integrate with Latch.</description>
+	<license>GNU General Public License Version 2</license>
 	<files>
 		<file type="module" id="mod_latch" client="site">modules/site/mod_latch</file>
 		<file type="plugin" id="latch" group="user">plugins/user/latch</file>
