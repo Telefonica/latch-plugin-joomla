@@ -2,7 +2,7 @@
 
 
 ##PREREQUISITES 
- * Joomla version 2.5 or later.
+ * Joomla version 2.5 - 3.4.8.
 
  * Curl extensions active in PHP (uncomment **"extension=php_curl.dll"** or"** extension=curl.so"** in Windows or Linux php.ini respectively). 
 
