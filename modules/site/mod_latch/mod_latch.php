@@ -11,6 +11,8 @@ defined('_JEXEC') or die;
 
 JLoader::import('latch.library');
 
+use ElevenPaths\Latch\Joomla\Helper\LatchHelper;
+
 // Load module language
 $lang = JFactory::getLanguage();
 $lang->load('mod_latch', JPATH_SITE);

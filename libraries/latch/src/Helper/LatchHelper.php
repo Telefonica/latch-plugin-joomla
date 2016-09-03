@@ -7,14 +7,16 @@
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
+namespace ElevenPaths\Latch\Joomla\Helper;
+
 defined('_JEXEC') or die;
+
+use ElevenPaths\Latch\Latch;
 
 /**
  * Global Latch helper
  *
- * @package     Latch
- * @subpackage  Library
- * @since       1.0
+ * @since  1.0.0
  */
 class LatchHelper
 {
@@ -32,7 +34,7 @@ class LatchHelper
 	 */
 	public static function pair($pairingToken)
 	{
-		if (self::getLatchId(JFactory::getUser()->id) != null)
+		if (self::getLatchId(\JFactory::getUser()->id) != null)
 		{
 			// If the user is already paired, avoid API call
 			return true;
@@ -74,7 +76,7 @@ class LatchHelper
 	 */
 	private static function storeLatchId($response)
 	{
-		$userId = JFactory::getUser()->id;
+		$userId = \JFactory::getUser()->id;
 		$latchId = $response->getData()->{"accountId"};
 
 		return self::insertLatchId($userId, $latchId);
@@ -87,7 +89,7 @@ class LatchHelper
 	 */
 	public static function unpair()
 	{
-		$user = JFactory::getUser();
+		$user = \JFactory::getUser();
 		$api = self::getLatchConnection();
 
 		if ($api == null)
@@ -116,7 +118,7 @@ class LatchHelper
 	 */
 	public static function getLatchConnection()
 	{
-		$pluginParams = new JRegistry(JPluginHelper::getPlugin("user", "latch")->params);
+		$pluginParams = new \JRegistry(\JPluginHelper::getPlugin("user", "latch")->params);
 		$appId = $pluginParams->get("latch_appID");
 		$appSecret = $pluginParams->get("latch_appSecret");
 		$apiHost = $pluginParams->get("latch_host");
@@ -148,7 +150,7 @@ class LatchHelper
 			return;
 		}
 
-		$db = JFactory::getDbo();
+		$db = \JFactory::getDbo();
 		$query = $db->getQuery(true)
 				->select($db->quoteName('profile_value'))
 				->from($db->quoteName(self::$profilesTable))
@@ -173,7 +175,7 @@ class LatchHelper
 	 */
 	public static function insertLatchId($userId, $latchId)
 	{
-		$db = JFactory::getDbo();
+		$db = \JFactory::getDbo();
 		$query = $db->getQuery(true);
 		$table = $db->quoteName(self::$profilesTable);
 
@@ -215,7 +217,7 @@ class LatchHelper
 	 */
 	public static function removeLatchId($userId)
 	{
-		$db = JFactory::getDbo();
+		$db = \JFactory::getDbo();
 		$query = $db->getQuery(true);
 
 		if (self::getLatchId($userId) != null)

@@ -15,12 +15,11 @@ JLoader::setup();
 // Global libraries autoloader
 JLoader::registerPrefix('Latch', dirname(__FILE__));
 
-// We don't use autoload to avoid changing standard SDK
-if (!class_exists('Latch'))
+$composerAutoload = __DIR__ . '/vendor/autoload.php';
+
+if (file_exists($composerAutoload))
 {
-	require_once dirname(__FILE__) . '/sdk/Error.php';
-	require_once dirname(__FILE__) . '/sdk/LatchResponse.php';
-	require_once dirname(__FILE__) . '/sdk/Latch.php';
+	$loader = require_once $composerAutoload;
 }
 
 // Load library language

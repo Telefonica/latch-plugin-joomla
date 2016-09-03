@@ -10,8 +10,8 @@
     <libraryname>latch</libraryname>
     <description>Common Latch library for Joomla!</description>
     <files>
-        <folder>sdk</folder>
-        <folder>helper</folder>
+        <folder>src</folder>
+        <folder>vendor</folder>
         <filename>LICENSE</filename>
         <filename>library.php</filename>
     </files>

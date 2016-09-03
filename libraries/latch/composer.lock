@@ -1,0 +1,59 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "53eac11077dd984067a191ca8def010f",
+    "content-hash": "8dd3e907a7148857bcae3f03498cf18d",
+    "packages": [
+        {
+            "name": "ElevenPaths/latch-sdk-php",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ElevenPaths/latch-sdk-php.git",
+                "reference": "01fd2f98c36f569ae4f162fb976bf35709abc19a"
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "sdk",
+            "autoload": {
+                "psr-4": {
+                    "ElevenPaths\\Latch\\": "src/"
+                }
+            },
+            "license": [
+                "LGPL-2.1+"
+            ],
+            "authors": [
+                {
+                    "name": "ElevenPaths",
+                    "email": "elevenpaths@elevenpaths.com"
+                }
+            ],
+            "description": "Latch SDK PHP",
+            "homepage": "https://latch.elevenpaths.com/",
+            "keywords": [
+                "api",
+                "latch",
+                "php",
+                "security"
+            ],
+            "time": "2016-02-25 11:13:34"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {
+        "elevenpaths/latch-sdk-php": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": ">=5.3.0"
+    },
+    "platform-dev": []
+}
