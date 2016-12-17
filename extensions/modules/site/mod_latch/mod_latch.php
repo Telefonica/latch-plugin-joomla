@@ -15,7 +15,7 @@ use ElevenPaths\Latch\Joomla\Helper\LatchHelper;
 
 // Load module language
 $lang = JFactory::getLanguage();
-$lang->load('mod_latch', JPATH_SITE);
+$lang->load('mod_latch', __DIR__);
 
 // Add CSS files
 //JFactory::getDocument()->addStyleSheet(JUri::root() . "modules/mod_latch/latch.css");
