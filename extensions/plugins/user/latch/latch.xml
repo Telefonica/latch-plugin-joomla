@@ -3,25 +3,17 @@
     <name>Latch user plugin for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
-    <license>GNU General Public License version 2 or later, see LICENSE.</license>
-    <copyright>Copyright (C) 2013-2014 Eleven Paths. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <copyright>Copyright (C) 2013-2016 Eleven Paths. All rights reserved.</copyright>
     <version>2.0.0</version>
     <creationDate>April 2014</creationDate>
     <description>Latch plugin for users for Joomla!</description>
     <scriptfile>install.php</scriptfile>
     <files>
-        <filename>LICENSE</filename>
+        <folder>language</folder>
         <filename plugin="latch">latch.php</filename>
         <filename>twoFactorForm.php</filename>
     </files>
-    <languages folder="language">
-        <!-- en-GB -->
-        <language tag="en-GB">en-GB/en-GB.plg_user_latch.ini</language>
-        <language tag="en-GB">en-GB/en-GB.plg_user_latch.sys.ini</language>
-        <!-- es-ES -->
-        <language tag="es-ES">es-ES/es-ES.plg_user_latch.ini</language>
-        <language tag="es-ES">es-ES/es-ES.plg_user_latch.sys.ini</language>
-    </languages>
     <config>
         <fields name="params">
             <fieldset name="basic">
