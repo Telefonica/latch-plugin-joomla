@@ -1,0 +1,11 @@
+{
+	"libraries"  : ["latch"],
+	"modules"    : {
+		"backend" : ["admin_latch"],
+		"frontend" : ["latch"]
+	},
+	"packages"   : ["latch"],
+	"plugins"    : {
+		"user" : ["latch"]
+	}
+}
