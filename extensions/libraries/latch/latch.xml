@@ -3,8 +3,8 @@
     <name>Latch - Library for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
-    <license>GNU General Public License version 2 or later, see LICENSE.</license>
-    <copyright>Copyright (C) 2013-2014 Eleven Paths. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <copyright>Copyright (C) 2013-2016 Eleven Paths. All rights reserved.</copyright>
     <version>2.0.0</version>
     <creationDate>April 2014</creationDate>
     <libraryname>latch</libraryname>
@@ -12,7 +12,6 @@
     <files>
         <folder>src</folder>
         <folder>vendor</folder>
-        <filename>LICENSE</filename>
         <filename>library.php</filename>
     </files>
 </extension>
