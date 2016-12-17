@@ -3,14 +3,13 @@
     <name>Latch - Module (Admin) for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
-    <license>GNU General Public License version 2 or later, see LICENSE.</license>
-    <copyright>Copyright (C) 2013-2014 Eleven Paths. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <copyright>Copyright (C) 2013-2016 Eleven Paths. All rights reserved.</copyright>
     <version>2.0.0</version>
     <creationDate>April 2014</creationDate>
     <description>Latch authentication plugin for Joomla!</description>
 	<scriptfile>install.php</scriptfile>
     <files>
-        <filename>LICENSE</filename>
         <filename>mod_admin_latch.xml</filename>
         <filename module="mod_admin_latch">mod_admin_latch.php</filename>
     </files>
