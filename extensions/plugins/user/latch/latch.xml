@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="3.0" type="plugin" group="user">
+<extension version="3.0" type="plugin" group="user" method="upgrade">
     <name>Latch user plugin for Joomla!</name>
     <author>Eleven Paths</author>
     <authorUrl>www.elevenpaths.com</authorUrl>
