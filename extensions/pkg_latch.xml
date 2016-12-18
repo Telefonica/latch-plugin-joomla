@@ -15,4 +15,7 @@
 		<file type="module" id="mod_admin_latch" client="administrator">modules/admin/mod_admin_latch</file>
 		<file type="library" id="latch">libraries/latch</file>
 	</files>
+	<updateservers>
+		<server type="extension" priority="2" name="Latch Updates">https://raw.github.com/ElevenPaths/latch-plugin-joomla/master/updates/pkg_latch.xml</server>
+	</updateservers>
 </extension>
