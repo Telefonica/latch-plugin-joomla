@@ -1,0 +1,51 @@
+# OSX
+.DS_Store
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# PHPStorm
+.idea/
+
+# Sublime Text
+*.sublime*
+
+# Eclipse
+.buildpath
+.project
+.settings
+
+# Temp files
+*.tmp
+*.bak
+*.swp
+*~.nib
+*~
+
+# Build
+.sass-cache
+bower_components
+gulp-config.json
+node_modules
+npm-debug.log
+releases
+
+# composer
+extensions/libraries/latch/vendor/*
+
+# LESS Transpiler
+npm-debug.log
+
+# Never ignore
+!.gitignore
+!index.html
+!index.php
+
+# Build config
+gulp-config.json
+node_modules
+releases

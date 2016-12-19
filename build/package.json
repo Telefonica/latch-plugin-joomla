@@ -1,0 +1,41 @@
+{
+  "name": "latch-plugin-joomla",
+  "version": "2.0.0",
+  "description": "Joomla! extension to integrate with Latch",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ElevenPaths/latch-plugin-joomla.git"
+  },
+  "keywords": [
+    "joomla",
+    "tfa",
+    "elevenpaths",
+    "latch"
+  ],
+  "author": "Eleven Paths",
+  "license": "GPL-2.0",
+  "devDependencies": {
+    "beepbeep": "^1.2.0",
+    "browser-sync": "^2.18.5",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-composer": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^2.0.0",
+    "gulp-util": "^3.0.7",
+    "gulp-zip": "^3.2.0",
+    "joomla-gulp": "^1.1.2",
+    "require-dir": "^0.3.1",
+    "xml2js": "^0.4.17"
+  }
+}

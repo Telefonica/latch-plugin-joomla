@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.0" type="plugin" group="user" method="upgrade">
+    <name>Latch user plugin for Joomla!</name>
+    <author>Eleven Paths</author>
+    <authorUrl>www.elevenpaths.com</authorUrl>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <copyright>Copyright (C) 2013-2016 Eleven Paths. All rights reserved.</copyright>
+    <version>3.0.0</version>
+    <creationDate>December 2016</creationDate>
+    <description>Latch plugin for users for Joomla!</description>
+    <files>
+        <folder>language</folder>
+        <filename plugin="latch">latch.php</filename>
+        <filename>twoFactorForm.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field
+                    name="latch_appID"
+                    type="text"
+                    size="45"
+                    maxlength="20"
+                    label="PLG_USER_LATCH_PARAM_APPLICATION_ID_LABEL"
+                    description="PLG_USER_LATCH_PARAM_APPLICATION_ID_DESC"
+                />
+                <field
+                    name="latch_appSecret"
+                    type="text"
+                    size="45"
+                    maxlength="40"
+                    label="PLG_USER_LATCH_PARAM_APPLICATION_SECRET_LABEL"
+                    description="PLG_USER_LATCH_PARAM_APPLICATION_SECRET_DESC"
+                />
+                <field
+                    name="latch_host"
+                    type="text"
+                    size="40"
+                    label="PLG_USER_LATCH_PARAM_HOST_LABEL"
+                    description="PLG_USER_LATCH_PARAM_HOST_DESC"
+                    default="https://latch.elevenpaths.com"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

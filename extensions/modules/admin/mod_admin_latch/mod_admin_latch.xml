@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.2" client="administrator" method="upgrade">
+    <name>Latch - Module (Admin) for Joomla!</name>
+    <author>Eleven Paths</author>
+    <authorUrl>www.elevenpaths.com</authorUrl>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <copyright>Copyright (C) 2013-2016 Eleven Paths. All rights reserved.</copyright>
+    <version>3.0.0</version>
+    <creationDate>December 2016</creationDate>
+    <description>Latch authentication plugin for Joomla!</description>
+	<scriptfile>install.php</scriptfile>
+    <files>
+        <filename>mod_admin_latch.xml</filename>
+        <filename module="mod_admin_latch">mod_admin_latch.php</filename>
+    </files>
+    <config>
+        <fields name="params">
+            <fieldset name="advanced">
+                <field
+                    name="layout"
+                    type="modulelayout"
+                    label="JFIELD_ALT_LAYOUT_LABEL"
+                    description="JFIELD_ALT_MODULE_LAYOUT_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

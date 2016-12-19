@@ -1,0 +1,35 @@
+{
+  "name": "ElevenPaths/latch-plugin-joomla",
+  "type": "sdk",
+  "version": "2.0.1",
+  "description": "Latch plugin for Joomla",
+  "keywords": [
+    "joomla",
+    "security",
+    "php",
+    "latch"
+  ],
+  "homepage": "https://latch.elevenpaths.com/",
+  "license": "GPL v2.0+",
+  "authors": [
+    {
+      "name" : "ElevenPaths",
+      "email": "elevenpaths@elevenpaths.com"
+    }
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/ElevenPaths/latch-sdk-php.git",
+      "type": "git"
+    }
+  ],
+  "require": {
+    "php" : ">=5.3.0",
+    "elevenpaths/latch-sdk-php": "dev-master"
+  },
+  "autoload": {
+    "psr-4": {
+      "ElevenPaths\\Latch\\Joomla\\": "src/"
+    }
+  }
+}

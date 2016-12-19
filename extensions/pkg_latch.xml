@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension type="package" version="3.2" method="upgrade">
+	<name>Latch for Joomla!</name>
+	<author>Eleven Paths</author>
+	<packagename>latch</packagename>
+	<version>3.0.0</version>
+	<creationDate>December 2016</creationDate>
+	<url>www.elevenpaths.com</url>
+	<packager>Eleven Paths</packager>
+	<description>Joomla! extension to integrate with Latch.</description>
+	<license>GNU General Public License Version 2</license>
+	<scriptfile>install.php</scriptfile>
+	<files>
+		<file type="library" id="latch">libraries/latch</file>
+		<file type="module" id="mod_latch" client="site">modules/site/mod_latch</file>
+		<file type="module" id="mod_admin_latch" client="administrator">modules/admin/mod_admin_latch</file>
+		<file type="plugin" id="latch" group="user" enabled="true">plugins/user/latch</file>
+	</files>
+	<update folder="component/admin">
+		<scripts>
+			<folder>updates</folder>
+		</scripts>
+	</update>
+	<updateservers>
+		<server type="extension" priority="2" name="Latch Updates">https://raw.github.com/ElevenPaths/latch-plugin-joomla/master/updates/pkg_latch.xml</server>
+	</updateservers>
+</extension>
