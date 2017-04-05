@@ -2,7 +2,11 @@
 
 
 ##PREREQUISITES 
- * Joomla version 2.5 - 3.4.8.
+ * Joomla version 2.5 - 3.6.5.
+
+ * Git version 2.12.2 
+
+ * Composer version 1.4.1
 
  * Curl extensions active in PHP (uncomment **"extension=php_curl.dll"** or"** extension=curl.so"** in Windows or Linux php.ini respectively). 
 
@@ -18,9 +22,15 @@
 
 
 ##INSTALLING THE MODULE IN JOOMLA
-* Add the plugin as a module in its administration panel in Joomla. Click on **"Extensions Manager"**, inside **"Extensions"**. It will show a form where you can browse and select previously downloaded ZIP file. Press **"Upload & Install"** to install it.
+* Download the plugin, unzip it, open a terminal window in the "/extensions/libraries/latch/" subpath and run the command **"composer install"**. Rezip it after it's finished.
 
-* Introduce **"Application ID"** and **"Secret"** previously generated. The administrator can now save the changes clicking on **"Save"** or **"Save & Close"**. If everything is ok, a confirmation message will be received.
+* Add the plugin as a module in its administration panel in Joomla. Click on **"Manage"** inside **"Extensions"**. It will show a form where you can browse and select previously downloaded ZIP files. Press **"Upload & Install"** to install it.
+
+* Select **"Plugins"** in the top menu under **"Extensions"**. Search for the Latch plugin ("Latch user plugin for Joomla!"), click on it and type your Application ID and Application secret. The **"Host"** field should be autocompleted with the value **"https://latch.elevenpaths.com"**. Save the configuration. If everything is ok, a confirmation message will be received. Click on close.
+
+* In the current window, select the Latch plugin and click on **"Enable"**.
+
+* Select **"Manage"** under **"Extensions">"Manage"** in the top menu. Search for "Latch", select all results and click on **"Enable"**.
 
 * Click on **"Module Manager: Modules"**, on the left side of the administrator's panel. To change the position it is necessary to edit the module, clicking on it. A new window will be opened and the location may be set. It will depend on the theme used in Joomla.
 
@@ -35,9 +45,9 @@ Go to **"Extensions Manager"**, inside **"Extensions"**. Press **"Manage"** on t
 ###Pairing a user in Joomla
 The user needs the Latch application installed on the phone, and follow these steps:
 
-* **Step 1:** Logged in your own account, and click on the new button **"Pair Account"**.
+* **Step 1:** Log into your own account and you will find the Latch module on the top right corner. Click on the button **"Pair Account"** and you will be prompted to introduce your pairing token.
 
-* **Step 2:** From the Latch app on the phone, the user has to generate the token, pressing on **“Add a new service"** at the bottom of the application, and pressing **"Generate new code"** will take the user to a new screen where the pairing code will be displayed.
+* **Step 2:** From the Latch app on the phone, the user has to generate the token, pressing on **“Add a new service"** at the bottom of the application. Pressing **"Generate new code"** will take the user to a new screen where the pairing code will be displayed.
 
 * **Step 3:** The user has to type the characters generated on the phone into the text box displayed on the web page. Click on **"Submit"** button.
 
