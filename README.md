@@ -14,6 +14,9 @@
 
  
 ## DOWNLOADING THE JOOMLA PLUGIN
+
+* Download latest version from [latch-plugin-joomla-v3.1.0.zip](https://github.com/ElevenPaths/latch-plugin-joomla/files/3720553/latch-plugin-joomla-v3.1.0.zip) and install it through Joomla Extension manager.
+
  * When the account is activated, the user will be able to create applications with Latch and access to developer documentation, including existing SDKs and plugins. The user has to access again to [Developer area](https://latch.elevenpaths.com/www/developerArea"https://latch.elevenpaths.com/www/developerArea"), and browse his applications from **"My applications"** section in the side menu.
 
 * When creating an application, two fundamental fields are shown: **"Application ID"** and **"Secret"**, keep these for later use. There are some additional parameters to be chosen, as the application icon (that will be shown in Latch) and whether the application will support OTP  (One Time Password) or not.
