@@ -2,7 +2,7 @@
 
 
 ## PREREQUISITES 
- * Joomla version 2.5 - 3.6.5.
+ * Joomla version 3.x.
 
  * Git version 2.12.2 
 

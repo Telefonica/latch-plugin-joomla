@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<ruleset name="joomla-entity">
+	<rule ref="./vendor/joomla/coding-standards/Joomla">
+		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
+	</rule>
+	<file>./extensions/</file>
+	<!-- Ignore javascript -->
+	<exclude-pattern>*.css</exclude-pattern>
+	<exclude-pattern>*.js</exclude-pattern>
+	<!-- Ignore Templates -->
+	<exclude-pattern>*/templates/**</exclude-pattern>
+	<!-- Ignore Layouts -->
+	<exclude-pattern>*/layouts/**</exclude-pattern>
+	<exclude-pattern>*/tmpl/**</exclude-pattern>
+	<!-- Ignore vendor + tests -->
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<exclude-pattern>*/vendor/*</exclude-pattern>
+	<rule ref="Joomla.Classes.InstantiateNewClasses">
+		<properties>
+			<property name="shortArraySyntax" value="true"/>
+		</properties>
+	</rule>
+</ruleset>

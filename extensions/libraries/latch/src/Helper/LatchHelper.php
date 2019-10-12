@@ -3,7 +3,7 @@
  * @package     Latch
  * @subpackage  Library
  *
- * @copyright   Copyright (C) 2013-2016 Eleven Paths. All rights reserved.
+ * @copyright   Copyright (C) 2013-2019 Eleven Paths. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
@@ -152,14 +152,14 @@ class LatchHelper
 
 		$db = \JFactory::getDbo();
 		$query = $db->getQuery(true)
-				->select($db->quoteName('profile_value'))
-				->from($db->quoteName(self::$profilesTable))
-				->where(
-					array(
-						$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id', false),
-						$db->quoteName('user_id') . ' = ' . (int) $userId
-					)
-				);
+			->select($db->quoteName('profile_value'))
+			->from($db->quoteName(self::$profilesTable))
+			->where(
+				array(
+					$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id', false),
+					$db->quoteName('user_id') . ' = ' . (int) $userId
+				)
+			);
 		$db->setQuery($query);
 
 		return $db->loadResult();
@@ -183,24 +183,24 @@ class LatchHelper
 		if (self::getLatchId($userId) == null)
 		{
 			$query->insert($table)
-					->columns($db->quoteName(array('user_id', 'profile_key', 'profile_value')))
-					->values(implode(',', array((int) $userId, $db->quote('latch.id', false), $db->quote($latchId))));
+				->columns($db->quoteName(array('user_id', 'profile_key', 'profile_value')))
+				->values(implode(',', array((int) $userId, $db->quote('latch.id', false), $db->quote($latchId))));
 		}
 		else
 		// Update record
 		{
 			$query->update($table)
-					->set(
-						array(
-							$db->quoteName('profile_value') . ' = ' . $db->quoteName($latchId),
-						)
+				->set(
+					array(
+						$db->quoteName('profile_value') . ' = ' . $db->quoteName($latchId),
 					)
-					->where(
-						array(
-							$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id'),
-							$db->quoteName('user_id') . ' = ' . (int) $userId
-						)
-					);
+				)
+				->where(
+					array(
+						$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id'),
+						$db->quoteName('user_id') . ' = ' . (int) $userId
+					)
+				);
 		}
 
 		$db->setQuery($query);
@@ -223,12 +223,12 @@ class LatchHelper
 		if (self::getLatchId($userId) != null)
 		{
 			$query->delete(self::$profilesTable)
-					->where(
-						array(
-							$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id', false),
-							$db->quoteName('user_id') . ' = ' . (int) $userId
-						)
-					);
+				->where(
+					array(
+						$db->quoteName('profile_key') . ' = ' . $db->quote('latch.id', false),
+						$db->quoteName('user_id') . ' = ' . (int) $userId
+					)
+				);
 			$db->setQuery($query);
 
 			return $db->execute();

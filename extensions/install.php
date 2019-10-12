@@ -3,7 +3,7 @@
  * @package     Latch.Package
  * @subpackage  Installer
  *
- * @copyright   Copyright (C) 2013-2016 Eleven Paths. All rights reserved.
+ * @copyright   Copyright (C) 2013-2019 Eleven Paths. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
@@ -230,10 +230,8 @@ class Pkg_LatchInstallerScript
 		}
 		elseif (in_array($type, array('install', 'discover_install')))
 		{
-			return $this->enablePlugins($parent);
+			$this->enablePlugins($parent);
 		}
-
-		return true;
 	}
 
 	/**

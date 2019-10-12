@@ -49,3 +49,11 @@ npm-debug.log
 gulp-config.json
 node_modules
 releases
+
+# Composer
+/vendor/
+composer.lock
+
+# Tests
+/tests/coverage
+phpunit.xml

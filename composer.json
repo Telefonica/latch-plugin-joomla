@@ -1,0 +1,63 @@
+{
+  "name": "ElevenPaths/latch-plugin-joomla",
+  "type": "sdk",
+  "version": "2.0.1",
+  "description": "Latch plugin for Joomla",
+  "keywords": [
+    "joomla",
+    "security",
+    "php",
+    "latch"
+  ],
+  "homepage": "https://latch.elevenpaths.com/",
+  "license": "GPL v2.0+",
+  "authors": [
+    {
+      "name" : "ElevenPaths",
+      "email": "elevenpaths@elevenpaths.com"
+    }
+  ],
+  "repositories": [
+    {
+      "url": "https://github.com/ElevenPaths/latch-sdk-php.git",
+      "type": "git"
+    }
+  ],
+  "config": {
+    "process-timeout":0
+  },
+  "require": {
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ElevenPaths\\Latch\\Joomla\\": "extensions/libraries/latch/src/"
+    }
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "ElevenPaths\\Latch\\Joomla\\Tests\\": "tests/tests"
+      }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^4.8.35",
+    "joomla/coding-standards": "~2.0@alpha",
+    "squizlabs/php_codesniffer": "^2.8"
+  },
+  "extra": {
+      "branch-alias": {
+          "dev-master": "2.0-dev"
+      }
+  },
+  "scripts": {
+    "clean"        : "cd ./build && gulp clean",
+    "copy"         : "cd ./build && gulp copy",
+    "cs"           : "./vendor/bin/phpcs",
+    "dev"          : "cd ./build && gulp",
+    "release"      : "cd ./build && gulp release",
+    "setup"        : "cd ./build && npm install && cp gulp-config.dist.json gulp-config.json",
+    "test"         : "./vendor/bin/phpunit",
+    "testFailFast" : "./vendor/bin/phpunit --stop-on-failure",
+    "watch"        : "cd ./build && gulp watch"
+  }
+}

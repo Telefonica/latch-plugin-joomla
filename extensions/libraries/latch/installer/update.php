@@ -3,7 +3,7 @@
  * @package     Latch.Library
  * @subpackage  Installer
  *
- * @copyright   Copyright (C) 2013-2016 Eleven Paths. All rights reserved.
+ * @copyright   Copyright (C) 2013-2019 Eleven Paths. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE
  */
 
@@ -74,7 +74,8 @@ abstract class LatchInstallerUpdateScript
 		$files = (array) $files;
 
 		array_map(
-			function($file){
+			function ($file)
+			{
 				@unlink($file);
 			},
 			$files
