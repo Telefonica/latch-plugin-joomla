@@ -5,8 +5,8 @@
     <authorUrl>www.elevenpaths.com</authorUrl>
     <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
     <copyright>Copyright (C) 2013-2019 Eleven Paths. All rights reserved.</copyright>
-    <version>3.0.0</version>
-    <creationDate>December 2016</creationDate>
+    <version>3.1.0</version>
+    <creationDate>October 2019</creationDate>
     <description>Latch authentication plugin for Joomla!</description>
 	<scriptfile>install.php</scriptfile>
     <files>

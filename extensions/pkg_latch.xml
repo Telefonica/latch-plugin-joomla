@@ -3,8 +3,8 @@
 	<name>Latch for Joomla!</name>
 	<author>Eleven Paths</author>
 	<packagename>latch</packagename>
-	<version>3.0.0</version>
-	<creationDate>December 2016</creationDate>
+	<version>3.1.0</version>
+	<creationDate>October 2019</creationDate>
 	<url>www.elevenpaths.com</url>
 	<packager>Eleven Paths</packager>
 	<description>Joomla! extension to integrate with Latch.</description>
