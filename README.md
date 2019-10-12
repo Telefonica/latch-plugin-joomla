@@ -4,7 +4,7 @@
 
 Latch is a mobile service that lets you add an extra level of security to your online accounts and services. It gives you the control to switch your accounts off with a simple tap when you are not using them to help prevent any unauthorized use.
 
-![Mobile app preview](./docs/img/mobile-app.jpg?s=200)
+<img src="./docs/img/mobile-app.jpg" width="300" alt="Mobile app preview"/>
 
 ## PREREQUISITES 
  * Joomla version 3.x.
