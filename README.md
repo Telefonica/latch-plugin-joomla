@@ -1,5 +1,10 @@
 # LATCH INSTALLATION GUIDE FOR JOOMLA
 
+> Latch. The safety switch for your digital life
+
+Latch is a mobile service that lets you add an extra level of security to your online accounts and services. It gives you the control to switch your accounts off with a simple tap when you are not using them to help prevent any unauthorized use.
+
+![Mobile app preview](./docs/img/mobile-app.jpg)
 
 ## PREREQUISITES 
  * Joomla version 3.x.
